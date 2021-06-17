@@ -1,5 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <style>
+    .btn-giveaway {
+      border: 2px solid black;
+      background-color: white;
+      color: black;
+      padding: 14px 28px;
+      font-size: 150%;
+
+      cursor: pointer;
+    }
+    
+    /* Orange */
+    .btn-giveaway {
+      border-color: #ff9800;
+      color: orange;
+      width: 40%;
+      margin-left : 30%;
+    }
+    
+    .btn-giveaway:hover {
+      background: #ff9800;
+      color: white;
+    }
+    
+    .default:hover {
+      background: #e7e7e7;
+    }
+    </style>
+
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,15 +52,16 @@
     <div class="container" style="width: 650px;">
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="text-center">AstroVote Results</h1>
+          <h1 class="text-center">Marketplace oeuvre d'art</h1>
           <hr/>
           <br/>
-          <div id="loader">
+          <!--<div id="loader">
             <p class="text-center">Loading...</p>
-          </div>
+          </div>-->
           
           <!-- bouton récupérer 1000 MAC -->
-          <button id = "giveaway" onClick="App.giveMac()">Generate 1000 MAC</button>
+          <button class="btn-giveaway" id = "giveaway" onClick="App.giveMac()">Get 1000 MAC</button>
+          <!--<button id = "giveaway" onClick="App.giveMac()" class="btn btn-success" >Get 1000 MAC</button>-->
 
           <div id="content" style="display: none;">
             <table class="table">
