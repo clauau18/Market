@@ -106,12 +106,12 @@ App = {
     });
   },
 
-  giveMac: function() {
+  claimMac: function() {
     var thisAccount = App.account;
     console.log(App.contracts);
     App.contracts.MyArtCoin.deployed().then(function (instance){
-      return instance.macGratuit({ from: App.account });
-    }).then(function(result) {  
+      return instance.claimMac({ from: App.account });
+    }).then(function(result) {
       // Wait for votes to update
       $("#content").hide();
       $("#loader").show();
