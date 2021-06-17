@@ -108,14 +108,18 @@ App = {
 
   giveMac: function() {
     var thisAccount = App.account;
-    App.contracts.MyArtToken.deployed.then(function (instance){
-      instance.macGratuit({
-        from:thisAccount
-      })
+    console.log(App.contracts);
+    App.contracts.MyArtCoin.deployed().then(function (instance){
+      return instance.macGratuit({ from: App.account });
+    }).then(function(result) {  
+      // Wait for votes to update
+      $("#content").hide();
+      $("#loader").show();
+    }).catch(function(err) {
+    console.error(err);
     });
   }
 };
-
 
 $(function() {
   $(window).load(function() {
