@@ -19,4 +19,6 @@ contract MyArtToken is ERC721
     //{
         //nft(_id,_name,_date,owner );
     //}
+
+    
 }

@@ -107,16 +107,13 @@ App = {
   },
 
   claimMac: function() {
-    var thisAccount = App.account;
-    console.log(App.contracts);
-    App.contracts.MyArtCoin.deployed().then(function (instance){
-      return instance.claimMac({ from: App.account });
+    App.contracts.Marketplace.deployed().then(function(instance) {
+      return instance.take(App.account, { from: App.account });
     }).then(function(result) {
-      // Wait for votes to update
       $("#content").hide();
       $("#loader").show();
     }).catch(function(err) {
-    console.error(err);
+      console.error(err);
     });
   }
 };

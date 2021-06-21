@@ -12,9 +12,9 @@ contract MyArtCoin is ERC20
     mapping(address => bool) public adresses;
 
     //Créer token ERC20
-    function claimMac () public {
-        transferFrom(this, msg.sender, 1000);
-    }
+    //function claimMac () public {
+    //    transferFrom(this, msg.sender, 1000);
+    //}
 
     constructor() public {
         _mint(this, 1000000);
