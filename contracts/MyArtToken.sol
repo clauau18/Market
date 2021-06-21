@@ -29,10 +29,10 @@ contract MyArtToken is ERC721
        
     }
 
-    function createNFT(uint _id, string _name, string _date, address _compte) private 
-    {
-      nftCount ++;
-      nfts[nftCount] = nfts(_id, _name, _date, _compte);
-    }
+    //function createNFT(uint _id, string _name, string _date, addressc _compte) private 
+    //{
+    //  nftCount ++;
+    //  nfts[nftCount] = nfts(_id, _name, _date, _compte);
+    //}
 
 }
