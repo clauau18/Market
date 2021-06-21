@@ -5,6 +5,10 @@ contract MyArtToken is ERC721
 {
 
 
+    mapping (uint => MyArtToken) public nfts; 
+
+    uint public nftCount;
+
     struct nft
     {
       uint id;
@@ -20,5 +24,15 @@ contract MyArtToken is ERC721
         //nft(_id,_name,_date,owner );
     //}
 
-    
+    constructor() public 
+    {
+       
+    }
+
+    function createNFT(uint _id, string _name, string _date, address _compte) private 
+    {
+      nftCount ++;
+      nfts[nftCount] = nfts(_id, _name, _date, _compte);
+    }
+
 }
